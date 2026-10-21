@@ -7,42 +7,44 @@ export default function App() {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        background: '#f8fafc',
-        color: '#0f172a',
+        background: '#07111f',
+        color: '#e5eefb',
         fontFamily: 'sans-serif',
       }}
     >
-      <div style={{ flex: 1, padding: '40px 20px 0' }}>
+      <div style={{ flex: 1, padding: '28px 20px 0' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <nav
             style={{
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              padding: '18px 20px',
-              borderRadius: '16px',
-              background: '#fff',
-              boxShadow: '0 8px 28px rgba(15, 23, 42, 0.06)',
-              marginBottom: '36px',
+              padding: '18px 22px',
+              borderRadius: '18px',
+              background: 'rgba(15, 23, 42, 0.8)',
+              border: '1px solid rgba(148, 163, 184, 0.18)',
+              boxShadow: '0 14px 40px rgba(2, 6, 23, 0.45)',
+              marginBottom: '32px',
+              backdropFilter: 'blur(10px)',
             }}
           >
-            <div style={{ fontWeight: 900, fontSize: '1.7rem', color: '#111827' }}>
+            <div style={{ fontWeight: 900, fontSize: '1.9rem', letterSpacing: '0.04em', color: '#f8fbff' }}>
               KANQKA
             </div>
 
-            <div style={{ display: 'flex', gap: '18px', alignItems: 'center' }}>
-              <Link to="/" style={{ textDecoration: 'none', color: '#0f172a', fontWeight: 700 }}>
+            <div style={{ display: 'flex', gap: '18px', alignItems: 'center', flexWrap: 'wrap' }}>
+              <Link to="/" style={{ textDecoration: 'none', color: '#f8fbff', fontWeight: 700 }}>
                 Home
               </Link>
-              <Link to="#features" style={{ textDecoration: 'none', color: '#475569', fontWeight: 600 }}>
+              <a href="#features" style={{ textDecoration: 'none', color: '#cbd5e1', fontWeight: 600 }}>
                 Features
-              </Link>
-              <Link to="#pricing" style={{ textDecoration: 'none', color: '#475569', fontWeight: 600 }}>
+              </a>
+              <a href="#pricing" style={{ textDecoration: 'none', color: '#cbd5e1', fontWeight: 600 }}>
                 Pricing
-              </Link>
-              <Link to="#contact" style={{ textDecoration: 'none', color: '#475569', fontWeight: 600 }}>
+              </a>
+              <a href="#contact" style={{ textDecoration: 'none', color: '#cbd5e1', fontWeight: 600 }}>
                 Contact
-              </Link>
+              </a>
             </div>
           </nav>
 
@@ -61,7 +63,7 @@ function Home() {
   return (
     <div>
       <Hero />
-      <Stats />
+      <TrustedBy />
       <Features />
       <Pricing />
       <Testimonials />
@@ -74,106 +76,105 @@ function Hero() {
   return (
     <section
       style={{
-        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-        color: '#fff',
+        background: 'linear-gradient(135deg, #091827 0%, #101f39 46%, #172a44 100%)',
         borderRadius: '28px',
-        padding: '64px 44px',
+        padding: '70px 42px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: '28px',
-        boxShadow: '0 24px 60px rgba(15, 23, 42, 0.2)',
+        border: '1px solid rgba(148, 163, 184, 0.18)',
+        boxShadow: '0 24px 80px rgba(2, 6, 23, 0.6)',
       }}
     >
       <div style={{ flex: 1 }}>
         <div
           style={{
             display: 'inline-block',
-            background: 'rgba(255,255,255,0.08)',
-            border: '1px solid rgba(255,255,255,0.12)',
-            padding: '8px 14px',
+            background: 'rgba(96, 165, 250, 0.14)',
+            border: '1px solid rgba(147, 197, 253, 0.3)',
+            padding: '9px 16px',
             borderRadius: '999px',
             fontSize: '12px',
-            letterSpacing: '1.2px',
+            letterSpacing: '1.4px',
             textTransform: 'uppercase',
+            color: '#dbeafe',
             marginBottom: '18px',
           }}
         >
-          Smart workflow platform
+          AI-powered operating system
         </div>
 
-        <h1 style={{ fontSize: '3.2rem', margin: 0, marginBottom: '16px', lineHeight: 1.1 }}>
-          Run your business with KANQKA
+        <h1 style={{ fontSize: '3.5rem', margin: 0, marginBottom: '18px', lineHeight: 1.05, color: '#f8fbff' }}>
+          Build a smarter business with KANQKA
         </h1>
 
         <p
           style={{
             margin: 0,
-            maxWidth: '620px',
-            fontSize: '1.1rem',
-            lineHeight: '1.8',
+            maxWidth: '630px',
+            fontSize: '1.08rem',
+            lineHeight: '1.85',
             color: '#cbd5e1',
           }}
         >
-          Manage tasks, automate workflow, and improve team productivity from one clean and powerful platform built for modern organizations.
+          Manage work, automate daily operations, and unify your team in one elegant platform designed for speed, clarity, and performance.
         </p>
 
         <div style={{ marginTop: '30px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
           <button
             style={{
-              background: '#f8fafc',
-              color: '#0f172a',
+              background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+              color: '#08111e',
               border: 'none',
               borderRadius: '12px',
-              padding: '14px 22px',
-              fontWeight: 800,
+              padding: '15px 24px',
+              fontWeight: 900,
               cursor: 'pointer',
+              boxShadow: '0 12px 30px rgba(96, 165, 250, 0.45)',
             }}
           >
-            Get Started
+            Start free trial
           </button>
           <button
             style={{
               background: 'transparent',
-              color: '#fff',
-              border: '1px solid rgba(255,255,255,0.35)',
+              color: '#e5eefb',
+              border: '1px solid rgba(255,255,255,0.18)',
               borderRadius: '12px',
-              padding: '14px 22px',
+              padding: '15px 24px',
               fontWeight: 800,
               cursor: 'pointer',
             }}
           >
-            Book Demo
+            Book demo
           </button>
         </div>
       </div>
 
       <div
         style={{
-          flex: '0 0 360px',
-          background: 'rgba(255,255,255,0.07)',
-          border: '1px solid rgba(255,255,255,0.12)',
-          borderRadius: '20px',
-          padding: '20px',
+          flex: '0 0 370px',
+          background: 'rgba(148, 163, 184, 0.08)',
+          border: '1px solid rgba(148, 163, 184, 0.18)',
+          borderRadius: '22px',
+          padding: '18px',
+          boxShadow: '0 18px 50px rgba(2, 6, 23, 0.45)',
         }}
       >
         <div
           style={{
-            background: '#fff',
+            background: 'linear-gradient(180deg, #ffffff 0%, #edf3ff 100%)',
             borderRadius: '18px',
-            padding: '16px',
-            color: '#111827',
+            padding: '18px',
+            color: '#0f172a',
           }}
         >
-          <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '12px' }}>Performance</div>
+          <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '14px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            Team overview
+          </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '12px',
-            }}
-          >
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '12px' }}>
             <div style={{ background: '#eff6ff', borderRadius: '14px', padding: '16px' }}>
               <div style={{ fontSize: '12px', color: '#475569' }}>Projects</div>
               <div style={{ fontSize: '26px', fontWeight: 900 }}>24</div>
@@ -197,31 +198,33 @@ function Hero() {
   );
 }
 
-function Stats() {
-  const stats = [
-    { label: 'Active teams', value: '1.2k+' },
-    { label: 'Tasks completed', value: '340k' },
-    { label: 'Faster delivery', value: '3.4x' },
-    { label: 'Customer rating', value: '4.9/5' },
-  ];
+function TrustedBy() {
+  const brands = ['Nova', 'Apex', 'Pulse', 'Northstar', 'Vertex'];
 
   return (
-    <section style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '20px', margin: '48px 0' }}>
-      {stats.map((item) => (
-        <div
-          key={item.label}
-          style={{
-            background: '#fff',
-            borderRadius: '18px',
-            padding: '22px 18px',
-            textAlign: 'center',
-            boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)',
-          }}
-        >
-          <div style={{ fontSize: '2rem', fontWeight: 900, color: '#0f172a' }}>{item.value}</div>
-          <div style={{ fontSize: '0.95rem', color: '#475569', marginTop: '6px' }}>{item.label}</div>
-        </div>
-      ))}
+    <section style={{ margin: '34px 0 14px', textAlign: 'center' }}>
+      <div style={{ color: '#94a3b8', fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '18px' }}>
+        Trusted by ambitious teams
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
+        {brands.map((brand) => (
+          <div
+            key={brand}
+            style={{
+              background: 'rgba(148, 163, 184, 0.08)',
+              border: '1px solid rgba(148, 163, 184, 0.14)',
+              borderRadius: '999px',
+              padding: '10px 18px',
+              color: '#dfeaf8',
+              fontWeight: 700,
+              letterSpacing: '0.05em',
+            }}
+          >
+            {brand}
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
@@ -229,45 +232,51 @@ function Stats() {
 function Features() {
   const items = [
     {
-      title: 'Automation',
-      text: 'Reduce repetitive manual work with smart workflows and process automation.',
+      title: 'Workflow automation',
+      text: 'Create fast, flexible workflows that remove bottlenecks and keep your team moving.',
     },
     {
-      title: 'Collaboration',
-      text: 'Bring your team together with shared tasks, updates, comments, and visibility.',
+      title: 'Collaboration hub',
+      text: 'Give every team member a shared view of tasks, timelines, and decisions in one place.',
     },
     {
-      title: 'Real-time Insights',
-      text: 'Track delivery, performance, and team progress using simple dashboard reporting.',
+      title: 'Actionable analytics',
+      text: 'Turn performance data into clear actions with dashboards that are easy to understand.',
     },
   ];
 
   return (
-    <section id="features" style={{ margin: '20px 0 60px' }}>
-      <h2 style={{ textAlign: 'center', fontSize: '2.4rem', marginBottom: '28px' }}>Why KANQKA</h2>
+    <section id="features" style={{ margin: '58px 0 64px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+        <div style={{ color: '#7dd3fc', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.8rem' }}>
+          Features
+        </div>
+        <h2 style={{ margin: '10px 0 0', fontSize: '2.5rem', color: '#f8fbff' }}>Everything you need to scale</h2>
+      </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '22px' }}>
         {items.map((item) => (
           <div
             key={item.title}
             style={{
-              background: '#fff',
-              borderRadius: '18px',
-              padding: '28px 22px',
-              boxShadow: '0 10px 32px rgba(15, 23, 42, 0.05)',
+              background: 'rgba(15, 23, 42, 0.9)',
+              border: '1px solid rgba(148, 163, 184, 0.14)',
+              borderRadius: '20px',
+              padding: '28px 24px',
+              boxShadow: '0 18px 42px rgba(15, 23, 42, 0.32)',
             }}
           >
             <div
               style={{
-                width: '52px',
-                height: '52px',
-                borderRadius: '14px',
-                background: '#dbeafe',
+                width: '54px',
+                height: '54px',
+                borderRadius: '16px',
+                background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
                 marginBottom: '18px',
               }}
             />
-            <h3 style={{ margin: '0 0 12px', fontSize: '1.35rem' }}>{item.title}</h3>
-            <p style={{ margin: 0, color: '#475569', lineHeight: 1.7 }}>{item.text}</p>
+            <h3 style={{ margin: '0 0 12px', fontSize: '1.35rem', color: '#f8fbff' }}>{item.title}</h3>
+            <p style={{ margin: 0, color: '#cbd5e1', lineHeight: 1.75 }}>{item.text}</p>
           </div>
         ))}
       </div>
@@ -277,34 +286,54 @@ function Features() {
 
 function Pricing() {
   const plans = [
-    { name: 'Starter', price: '$19', features: ['1 workspace', 'Unlimited tasks', 'Basic analytics'] },
-    { name: 'Growth', price: '$39', features: ['Unlimited projects', 'Advanced automation', 'Priority support'], featured: true },
-    { name: 'Scale', price: '$79', features: ['Custom workflows', 'Team permissions', 'Dedicated onboarding'] },
+    {
+      name: 'Starter',
+      price: '$19',
+      features: ['1 workspace', 'Unlimited tasks', 'Basic analytics'],
+      accent: false,
+    },
+    {
+      name: 'Growth',
+      price: '$39',
+      features: ['Unlimited projects', 'Automation flows', 'Priority support'],
+      accent: true,
+    },
+    {
+      name: 'Scale',
+      price: '$79',
+      features: ['Custom workflows', 'Advanced permissions', 'Dedicated onboarding'],
+      accent: false,
+    },
   ];
 
   return (
-    <section id="pricing" style={{ margin: '20px 0 60px' }}>
-      <h2 style={{ textAlign: 'center', fontSize: '2.4rem', marginBottom: '26px' }}>Pricing</h2>
+    <section id="pricing" style={{ margin: '20px 0 64px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+        <div style={{ color: '#7dd3fc', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.8rem' }}>
+          Pricing
+        </div>
+        <h2 style={{ margin: '10px 0 0', fontSize: '2.5rem', color: '#f8fbff' }}>Choose your plan</h2>
+      </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '22px' }}>
         {plans.map((plan) => (
           <div
             key={plan.name}
             style={{
-              background: plan.featured ? '#0f172a' : '#fff',
-              color: plan.featured ? '#fff' : '#0f172a',
-              borderRadius: '20px',
+              background: plan.accent ? 'linear-gradient(135deg, #111827 0%, #1e293b 100%)' : 'rgba(15, 23, 42, 0.82)',
+              color: '#f8fbff',
+              borderRadius: '22px',
               padding: '28px 24px',
-              boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)',
-              border: plan.featured ? 'none' : '1px solid #e2e8f0',
+              boxShadow: '0 18px 44px rgba(2, 6, 23, 0.38)',
+              border: plan.accent ? '1px solid rgba(96, 165, 250, 0.45)' : '1px solid rgba(148, 163, 184, 0.18)',
             }}
           >
-            <div style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '12px' }}>{plan.name}</div>
-            <div style={{ fontSize: '2.4rem', fontWeight: 900, marginBottom: '18px' }}>
+            <div style={{ fontWeight: 800, fontSize: '1.2rem', marginBottom: '12px' }}>{plan.name}</div>
+            <div style={{ fontSize: '2.6rem', fontWeight: 900, marginBottom: '18px' }}>
               {plan.price}<span style={{ fontSize: '0.9rem', opacity: 0.7 }}>/mo</span>
             </div>
 
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: 2.2, color: plan.featured ? '#e2e8f0' : '#475569' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: 2.2, color: plan.accent ? '#dbeafe' : '#cbd5e1' }}>
               {plan.features.map((feature) => (
                 <li key={feature}>• {feature}</li>
               ))}
@@ -317,9 +346,9 @@ function Pricing() {
                 padding: '12px 16px',
                 borderRadius: '12px',
                 border: 'none',
-                background: plan.featured ? '#fff' : '#0f172a',
-                color: plan.featured ? '#0f172a' : '#fff',
-                fontWeight: 800,
+                background: plan.accent ? '#f8fbff' : '#60a5fa',
+                color: plan.accent ? '#0f172a' : '#08111e',
+                fontWeight: 900,
                 cursor: 'pointer',
               }}
             >
@@ -334,29 +363,35 @@ function Pricing() {
 
 function Testimonials() {
   const items = [
-    { quote: 'KANQKA helped us simplify work and improve delivery performance in just a few weeks.', name: 'Maya C.' },
-    { quote: 'It feels simple, fast, and very professional for our growing team.', name: 'Daniel K.' },
-    { quote: 'We finally have clarity across projects, tasks, and team communication.', name: 'Sarah M.' },
+    { quote: 'KANQKA gave our team clarity, speed, and a better way to collaborate every single day.', name: 'Maya C.' },
+    { quote: 'We upgraded our workflow in a few weeks and immediately saw less friction across projects.', name: 'Daniel K.' },
+    { quote: 'The platform feels premium, clear, and fast — exactly what a growing business needs.', name: 'Sarah M.' },
   ];
 
   return (
-    <section style={{ margin: '20px 0 60px' }}>
-      <h2 style={{ textAlign: 'center', fontSize: '2.4rem', marginBottom: '28px' }}>What customers say</h2>
+    <section style={{ margin: '20px 0 64px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+        <div style={{ color: '#7dd3fc', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.8rem' }}>
+          Testimonials
+        </div>
+        <h2 style={{ margin: '10px 0 0', fontSize: '2.5rem', color: '#f8fbff' }}>Loved by modern teams</h2>
+      </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '22px' }}>
         {items.map((item) => (
           <div
             key={item.name}
             style={{
-              background: '#fff',
-              borderRadius: '18px',
+              background: 'rgba(15, 23, 42, 0.82)',
+              border: '1px solid rgba(148, 163, 184, 0.14)',
+              borderRadius: '20px',
               padding: '28px 22px',
-              boxShadow: '0 10px 28px rgba(15, 23, 42, 0.04)',
+              boxShadow: '0 18px 40px rgba(15, 23, 42, 0.2)',
             }}
           >
-            <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>“</div>
-            <p style={{ margin: '0 0 18px', color: '#475569', lineHeight: 1.7 }}>{item.quote}</p>
-            <strong>{item.name}</strong>
+            <div style={{ fontSize: '2rem', marginBottom: '10px', color: '#7dd3fc' }}>“</div>
+            <p style={{ margin: '0 0 18px', color: '#dbeafe', lineHeight: 1.8 }}>{item.quote}</p>
+            <strong style={{ color: '#f8fbff' }}>{item.name}</strong>
           </div>
         ))}
       </div>
@@ -369,29 +404,30 @@ function CTA() {
     <section id="contact" style={{ margin: '20px 0 80px' }}>
       <div
         style={{
-          background: 'linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%)',
-          borderRadius: '24px',
+          background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+          borderRadius: '26px',
           padding: '40px 28px',
           textAlign: 'center',
+          boxShadow: '0 20px 60px rgba(96, 165, 250, 0.35)',
         }}
       >
-        <h2 style={{ margin: '0 0 14px', fontSize: '2.3rem' }}>Ready to simplify your workflow?</h2>
-        <p style={{ margin: '0 0 22px', color: '#334155' }}>
-          Start with KANQKA and build a faster, smarter team experience.
+        <h2 style={{ margin: '0 0 14px', fontSize: '2.5rem', color: '#08111e' }}>Ready to build a smarter workflow?</h2>
+        <p style={{ margin: '0 0 22px', color: '#10213a', fontWeight: 600 }}>
+          Start with KANQKA and turn complexity into momentum.
         </p>
 
         <button
           style={{
-            background: '#0f172a',
-            color: '#fff',
+            background: '#08111e',
+            color: '#f8fbff',
             padding: '14px 22px',
             borderRadius: '12px',
             border: 'none',
-            fontWeight: 800,
+            fontWeight: 900,
             cursor: 'pointer',
           }}
         >
-          Start Free Trial
+          Start free trial
         </button>
       </div>
     </section>
@@ -402,25 +438,25 @@ function Footer() {
   return (
     <footer
       style={{
-        background: '#0f172a',
-        color: '#e2e8f0',
-        padding: '24px 20px',
+        background: '#020917',
+        color: '#dbeafe',
+        padding: '24px 20px 34px',
         textAlign: 'center',
-        marginTop: '30px',
+        borderTop: '1px solid rgba(148, 163, 184, 0.14)',
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ marginBottom: '8px' }}>
-          <strong style={{ color: '#fff' }}>Created by Ouichou ABD</strong>
+          <strong style={{ color: '#f8fbff' }}>Created by Ouichou ABD</strong>
         </div>
 
         <div style={{ marginBottom: '8px' }}>
-          Facebook: <strong style={{ color: '#fff' }}>Abdel David</strong>
+          Facebook: <strong style={{ color: '#f8fbff' }}>Abdel David</strong>
         </div>
 
         <div>
           Email:{' '}
-          <a href="mailto:adndvd063@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>
+          <a href="mailto:adndvd063@gmail.com" style={{ color: '#f8fbff', textDecoration: 'none' }}>
             adndvd063@gmail.com
           </a>
         </div>
